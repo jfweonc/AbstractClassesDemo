@@ -47,7 +47,24 @@ namespace ConsoleUI
             // Call each of the drive methods for one car and one motorcycle
 
             #endregion            
-            Console.ReadLine();
+            var myCar = new Car();
+            var myBike = new Motorcycle();
+            Vehicle myVehicle1 = new Car()
+            {
+                Make = "bmw",
+                Year = 2021,
+                Model = "S100"
+            }; 
+            
+            Vehicle myVehicle2 = new Motorcycle();
+            List<Vehicle> Vehicles = new List<Vehicle> (); 
+            Vehicles.Add(myVehicle1);
+            Vehicles.Add(myVehicle2);  
+            foreach(var item in Vehicles)
+            {
+                Console.WriteLine(item.Year); 
+            }
+            myVehicle1.DriveVirtual(); 
         }
     }
 }
